@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Panel de usuarios</h1>
+    <h3>Bienvenidos: {{ user }}</h3>
+    <!-- <p>fecha: {{ fecha }}</p> -->
+    <!-- para etiquetar al usuario actual se utiliza la varible "user", porque Django
+    crea la variable con un usuario en un contexto global gracias al metodo Login de las vistas-->
+    <ul>
+        <li><a href="{% url 'users_app:user-logout' %}">Cerrar Sesion</a></li>
+        <li><a href="{% url 'users_app:user-update' %}">Actualizar Datos</a></li>
+    </ul>
+</body>
+</html>
